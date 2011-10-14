@@ -1,0 +1,52 @@
+<div class="header round">
+  <div class="logo">
+    <span class="headertext">Interview filter</span>
+  </div>
+  <div class="welcome">
+    <% if current_user %>
+      <span>Welcome <%= current_user.firstName %></span>
+    <% end %>
+  </div>
+</div>
+<div class="navigation round">
+  <ul>
+    <%
+    if current_user
+        for role in eval(current_user.roles)
+          case role
+            when User::ROLE_ADMIN
+            %>
+            <li><%= link_to User::ROLE_STR_ADMIN, admin_path %></li>
+            <%
+            when User::ROLE_COMPANY_ADMIN
+            %>
+            <li><%= link_to User::ROLE_STR_COMPANY_ADMIN, coadmin_path %></li>
+            <%
+            when User::ROLE_RECRUITER
+            %>
+            <li><%= link_to User::ROLE_STR_RECRUITER, recruiting_path %></li>
+            <%
+            when User::ROLE_HIRING_MANAGER
+            %>
+            <li><%= link_to User::ROLE_STR_HIRING_MANAGER, hiring_path %></li>
+            <%
+            when User::ROLE_CANDIDATE
+            %>
+            <li><%= link_to User::ROLE_STR_CANDIDATE, home_path %></li>
+            <%
+            else
+              puts "Error : unknown Role"  
+          end
+        end
+        %>
+        <li><%= link_to "Logout", :logout %></li>
+        <%
+    else %>
+        <li class='current'><%= link_to "Home", root_path %></li>
+        <li><%= link_to "Pricing", pricing_path %></li>
+        <li><%= link_to "Contact", contact_path %></li>
+        <li><%= link_to "Login", login_path %></li>
+        <%
+    end %>
+  </ul>
+</div>

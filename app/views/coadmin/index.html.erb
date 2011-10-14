@@ -1,0 +1,10 @@
+<h1>Coadmin#index</h1>
+<div><%= link_to "Add user", new_user_path %></div>
+<div>User list</div>
+<%
+for user in @allUsers do
+%>
+  <div class="link"><%= link_to user.firstName + " " + user.lastName, user %></div>
+<%
+end
+%>

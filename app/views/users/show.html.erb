@@ -1,0 +1,43 @@
+<%= form_for @user, :url => { :controller => "users", :action => "update" } do |f| %>
+<div class="field">
+  <%= f.label :firstName %>
+  <%= f.text_field :firstName %>
+</div>
+<div class="field">
+  <%= f.label :lastName %>
+  <%= f.text_field :lastName %>
+</div>
+<div class="field">
+  <%= f.label :email %>
+  <%= f.text_field :email %>
+</div>
+<div class="field">
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+</div>
+<div class="field">
+  <%= f.label :password_confirmation %>
+  <%= f.password_field :password_confirmation %>
+</div>
+<div class="field">
+  <%= check_box_tag 'role[]', User::ROLE_ADMIN, @userRoles.include?(User::ROLE_ADMIN)?true:false %>
+  <%= label_tag User::ROLE_STR_ADMIN %>
+</div>
+<div class="field">
+  <%= check_box_tag 'role[]', User::ROLE_COMPANY_ADMIN, @userRoles.include?(User::ROLE_COMPANY_ADMIN)?true:false %>
+  <%= label_tag User::ROLE_STR_COMPANY_ADMIN %>
+</div>
+<div class="field">
+  <%= check_box_tag 'role[]', User::ROLE_RECRUITER, @userRoles.include?(User::ROLE_RECRUITER)?true:false %>
+  <%= label_tag User::ROLE_STR_RECRUITER %>
+</div>
+<div class="field">
+  <%= check_box_tag 'role[]', User::ROLE_HIRING_MANAGER, @userRoles.include?(User::ROLE_HIRING_MANAGER)?true:false %>
+  <%= label_tag User::ROLE_STR_HIRING_MANAGER %>
+</div>
+<div class="field">
+  <%= check_box_tag 'role[]', User::ROLE_CANDIDATE, @userRoles.include?(User::ROLE_CANDIDATE)?true:false %>
+  <%= label_tag User::ROLE_STR_CANDIDATE %>
+</div>
+<div class="actions"><%= f.submit %></div>
+<%  end %>

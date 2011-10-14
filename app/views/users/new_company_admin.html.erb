@@ -1,0 +1,64 @@
+<% form_tag(create_company_admin_path, :method=>'post') do %>
+<div style="padding:5px">
+  <div class="dataEntry round">
+    <div>
+      Company
+    </div>
+    <div class="field">
+      <%= label :company, :name %>
+      <%= text_field :company, :name %>
+    </div>
+    <div class="field">
+      <%= label :company, :address1 %>
+      <%= text_field :company, :address1 %>
+    </div>
+    <div class="field">
+      <%= label :company, :address2 %>
+      <%= text_field :company, :address2 %>
+    </div>
+    <div class="field">
+      <%= label :company, :city %>
+      <%= text_field :company, :city %>
+    </div>
+    <div class="field">
+      <%= label :company, :state %>
+      <%= text_field :company, :state %>
+    </div>
+    <div class="field">
+      <%= label :company, :zip %>
+      <%= text_field :company, :zip %>
+    </div>
+    <div class="field">
+      <%= label :company, :countryId %>
+      <%= text_field :company, :countryId %>
+    </div>
+  </div>
+  <div>&nbsp;</div>
+  <div class="dataEntry round">
+    <div>
+      Company administrator
+    </div>
+    <div class="field">
+      <%= label :user, :firstName %>
+      <%= text_field :user, :firstName %>
+    </div>
+    <div class="field">
+      <%= label :user, :lastName %>
+      <%= text_field :user, :lastName %>
+    </div>
+    <div class="field">
+      <%= label :user, :email %>
+      <%= text_field :user, :email %>
+    </div>
+    <div class="field">
+      <%= label :user, :password %>
+      <%= password_field :user, :password %>
+    </div>
+    <div class="field">
+      <%= label :user, :password_confirmation %>
+      <%= password_field :user, :password_confirmation %>
+    </div>
+  </div>
+  <div class="actions"><%= submit_tag "Sign up" %></div>
+</div>
+<% end %>

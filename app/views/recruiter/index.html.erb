@@ -1,0 +1,14 @@
+<h1>Recruiter#index</h1>
+<p>Find me in app/views/recruiter/index.html.erb</p>
+<div>Add test</div>
+<div><%= link_to "Add test", new_test_path %></div>
+<div>Tests</div>
+<%
+if @allTests
+  for test in @allTests do
+    %>
+    <div class="link"><%= link_to test.name, test %></div>
+    <%
+  end
+end
+%>

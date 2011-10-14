@@ -1,0 +1,138 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #fff;
+}
+
+.header {
+  background: #eee;
+  padding: 0px;
+  overflow: hidden;
+}
+
+.logo {
+  padding: 5px;
+  float: left;
+  width: 45%;
+}
+
+.welcome {
+  padding: 5px;
+  float: left;
+  width: 45%;
+  font-size: 150%;
+  text-align: top left;
+}
+
+.headertext {
+  font-size: 250%;
+  text-align: left;
+  margin-bottom: 0px;
+}
+
+.navigation {
+  clear: both;
+  margin: 5px 0;
+  padding: 5px;
+  overflow: hidden;
+  background: #D5F5F7;
+}
+
+.container {
+  width: 800px;
+  margin: 0 auto;
+  padding: 5px;
+}
+
+.content {
+  margin: 0 auto;
+  padding: 5px;
+  background: #D5F5F7;
+}
+
+.userChoice {
+  text-align: center;
+  padding: 20px;
+}
+
+.userSelect {
+  background: #eee;
+  padding: 5px;
+  border-spacing:5px 50px;
+  border: solid 1px;
+  border-color: #aaa;
+}
+
+.dataEntry {
+  background: #eee;
+  width: 350px;
+}
+
+.flashMessage {
+  color: #f99;
+}
+
+/* Links */
+
+a {
+  color: #09c;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #069;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #09c;
+  text-decoration: none;
+}
+
+/* Navigation */
+.navigation ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.navigation li { display: inline; }
+
+.navigation a {
+  float: left;
+  padding: 5px 15px;
+  color: white;
+  background: #bbb;
+  text-decoration: none;
+  margin: 0 2px 0 0;
+}
+
+.navigation a:hover {
+  color: #000;
+  background: #eee;
+}
+
+.navigation li.current a {
+  color: #fff;
+  background: red url('/images/01.jpg') repeat-x 0 100%;
+}
+
+/* Round corners */
+
+.round {
+  -moz-border-radius:     10px;
+  -webkit-border-radius:  10px;
+  border-radius:          10px;
+}
+
+/* Footer */
+
+.footer {
+  background: #eee;
+  clear: both;
+  font-size: 70%;
+  text-align: center;
+  margin: 5px 0 0;
+  padding: 5px;
+}
+
